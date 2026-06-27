@@ -1,0 +1,23 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-row {
+    border: 1px solid black;
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.grid-column {
+    border: 1px solid black;
+    flex: 1;
+}
