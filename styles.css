@@ -11,13 +11,15 @@ body {
 }
 
 .grid-row {
-    border: 1px solid black;
     flex: 1;
     display: flex;
     justify-content: space-evenly;
 }
 
 .grid-column {
-    border: 1px solid black;
     flex: 1;
+}
+
+.highlight {
+    background-color: aqua;
 }

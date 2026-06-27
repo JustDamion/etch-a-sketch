@@ -11,3 +11,8 @@ for (let i = 0; i < 16; i++) {
     }
 }
 
+container.addEventListener("mouseover", (event) => {
+    console.log(event);
+    const target = event.target;
+    target.classList.add("highlight");
+});
