@@ -1,7 +1,9 @@
 const grid = document.querySelector(".grid");
 const sizeSlider = document.getElementById("size-slider");
 const sizeLabel = document.getElementById("size-label");
+const clearButton = document.getElementById("clear-button");
 
+let size = 16;
 createGrid();
 
 grid.addEventListener("mouseover", (event) => {
@@ -10,10 +12,12 @@ grid.addEventListener("mouseover", (event) => {
 });
 
 sizeSlider.addEventListener("change", (event) => {
-    const size = event.target.value;
+    size = event.target.value;
     updateGridSize(size);
     sizeLabel.textContent = `${size} x ${size}`;
 });
+
+clearButton.addEventListener("click", () => updateGridSize(size));
 
 function generateRandomColor() {
     const randomHue = Math.random() * 360;
@@ -39,7 +43,6 @@ function createGrid(size = 16) {
 }
 
 function updateGridSize(size) {
-    console.log("Update");
     clearGrid();
     createGrid(size);
 }
