@@ -27,5 +27,5 @@ button {
 }
 
 .highlight {
-    background-color: aqua;
+    background-color: hsla(80, 100%, 50%, 1);
 }

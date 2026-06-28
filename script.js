@@ -3,11 +3,16 @@ createGrid();
 
 container.addEventListener("mouseover", (event) => {
     const target = event.target;
-    target.classList.add("highlight");
+    target.setAttribute("style", `background-color: ${generateRandomColor()}`);
 });
 
 const newGridButton = document.querySelector("button");
 newGridButton.addEventListener("click", newGrid);
+
+function generateRandomColor() {
+    const randomHue = Math.random() * 360;
+    return `hsla(${randomHue}, 100%, 50%, 1)`;
+}
 
 function createGrid(size = 16) {
     container.textContent = '';
